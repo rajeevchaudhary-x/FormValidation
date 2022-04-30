@@ -10,8 +10,8 @@
 </head>
 <body>
     <h1 class="text-center mt-2">Form-validation</h1>
-   <div class="alert" id="alert" style="background-color: orange; display: none;">
-       <strong id="mgs" style="margin-left: 39rem; font-size: 20px; font-weight: 600; color: lightgreen;">Form Submited Sucessfully <span style="margin-right: 34rem; float: right;">X</span></strong>
+   <div class="alert" id="alert" style="background-color: rgb(249, 232, 201); border-radius: 20px; display: none; cursor: pointer;">
+       <strong id="mgs" style="margin-left: 39rem; color: red; font-size: 20px; font-weight: 600; color: rgb(174, 215, 25);">Form Submited Sucessfully <span id="close" onclick="close()" style="margin-right: 34rem; float: right;">X</span></strong>
    </div>
 <div class="container">
     <div class="mb-3">
@@ -19,22 +19,22 @@
 
         <label for="exampleFormControlInput1" class="form-label">Name: </label>
         <input type="text" class="form-control " id="name" placeholder="Enter your name"> 
-        <span class="invalid-feedback " style="color: red;">* name must be greater than 3 and less than 10 </span>
+        <span class="invalid-feedback " style="color: red;">* name must be greater than 3 and less than 10 & Gap not allowed </span>
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Phone: </label>
         <input type="number" class="form-control" id="phone" placeholder="enter phone">
-        <span class="invalid-feedback " style="color: red;">*Phone must be & must be 10 digits</span>
+        <span class="invalid-feedback " style="color: red;">*Phone no  must be & must be 10 digits</span>
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">City: </label>
         <input type="text" class="form-control" id="City" placeholder="Enter city">
-        <span class="invalid-feedback " style="color: red;">* Enter a valid city name </span>
+        <span class="invalid-feedback " style="color: red;">* Enter a valid city name & Gap not allowed </span>
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email: </label>
         <input type="email" class="form-control" id="email" placeholder="Enter Email">
-        <span class="invalid-feedback " style="color: red;">* entered email  must be Valid email address  </span>
+        <span class="invalid-feedback " style="color: red;">* entered email  must be Valid email address & Gap not allowed  </span>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
@@ -135,4 +135,10 @@ if(flagC && flagE && flagN && flagP){
 }
 });
 
+
+
+ let cl = document.getElementById('close');
+ cl.addEventListener('click',()=>{
+     document.getElementById('alert').style.display='none'
+ })
 </script>
